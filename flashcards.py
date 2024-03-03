@@ -3,7 +3,7 @@ import subprocess
 from random import shuffle as r
 import datetime
 tday = datetime.date.today()
-pasta = r'C:\Users\monke\OneDrive\Área de Trabalho\Migs\flashcards'
+pasta = r'' #inserir pasta dos flashcards
 
 def encontrar_materia(materia):
     caminho_materia = os.path.join(pasta, materia)
