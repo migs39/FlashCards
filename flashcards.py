@@ -127,19 +127,19 @@ def main():
     print('2) Revisar alguma matéria específica\n3) Criar um card novo')
     print('4) Sair')
     i=input()
-    if i =='0':
+    if i =='0': #mostra os comandos adicionais
         print('Lista de comandos adicionais:')
         print('0 para ver a lista de comandos adicionais')
         print('getFile para abrir a pasta com os flashcards salvos')
         print("getCard durante o comando 'digite 1 se arcertou e 2 se errou' para receber o local do card")
     if i == '1':
-        allc = []
+        allc = [] #todos os cards a serem revisados
         for i in materias:
             m = os.path.join(pasta, i)
             ms = os.listdir(m)
             for j in ms:
                 allc.append(os.path.join(m, j))
-            r(allc)
+            r(allc) #deixa os cards em ordem aleatória
             for i in allc:
                 c = import_card(i)
                 c.revisar()
